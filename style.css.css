@@ -1,0 +1,397 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #171717;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(27, 209, 97);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: rgb(27 , 209, 97);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background: #3f3f3f;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header {
+    height: 120vh !important;
+    background: url(fotos/taller.png) no-repeat center;
+    background-size: cover;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+.subtitle {
+    margin-bottom: 40px;
+    font-size: 50px;
+    padding: 0 100px;
+    border-radius: 10%;
+    text-transform: uppercase;
+    text-shadow: 5px 5px #9c27b0, 5px 5px #d26ce4;
+}
+.titles {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #101010
+}
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #9c27b0;
+    padding: 0 100px;
+}
+
+.btn {
+    display: center;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #9c27b0;
+    color: #fff;
+    text-decoration: none;
+    background: #9c27b0;
+    text-align: justify;
+   
+    
+}
+
+.btn:hover {
+    background: none;
+    
+}
+
+.btn-home {
+    display: flex;
+
+}
+
+.btn-home a {
+    margin:  10px;
+    text-align: center;
+}
+
+
+
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sau {
+    padding: 30px;
+    background: #1f1d1d
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+.box-container .box {
+    height: 18rem;
+    width: 17rem;
+    background: #101010;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem #fff;
+    margin: 2rem;   
+}
+
+.box-container .box i {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(27 , 209, 97);
+    background: #9c27b0;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+}
+
+.box-container .box h3 {
+    font-size: 20px;
+    color: #9c27b0;
+
+}
+
+.box-container .box ul {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.box-container .box p {
+    padding: 0 15px;
+    font-size: 16px;
+}
+.projects{
+    background: #f2f2f2;
+}
+.projects__grid{
+    display: grid;
+    height: 550px;
+    grid-template-areas:  
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 10px;
+}
+
+
+
+.projects__item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.projects__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.projects__item:nth-last-of-type(1){
+grid-area: img1;
+}
+
+.projects__item:nth-last-of-type(2){
+grid-area: img2;
+}
+
+.projects__item:nth-last-of-type(3){
+grid-area: img3;
+}
+
+.projects__item:nth-last-of-type(4){
+grid-area: img4;
+}
+
+.projects__hover{
+    position: absolute;
+    background: #dc143c8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+
+}
+
+.project__item:hover .projects__hover{
+    transform: translateX(0%);
+
+}
+
+.project__icon{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.footer__title{
+    margin-bottom: 40px;
+    font-size: 50px;
+    padding: 0 100px;
+    border-radius: 10%;
+    text-transform: uppercase;
+    text-shadow: 5px 5px #9c27b0, 5px 5px #d26ce4;
+
+}
+
+
+    
+    
+
+    
+    .footer__title{
+    font-weight: 400;
+    color:#171717 ;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+    }
+    .footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+    }
+    .footer__container-icon{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        color:#ffff;
+        text-align: center;
+        border: 1px solid #ffff;
+        border-radius: 50%; 
+    }
+    .footer__icons{
+        color:#1f1d1d;
+        font-size: 38px;
+        text-decoration: none;
+    
+    }
+    .fab.footer__icons{
+        line-height: 80px;
+    }
+
+
+
+
+.about {
+    background: #101010;
+}
+.price {
+    
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: left;
+    background-color: #101010;
+}
+
+.contain {
+    display: left;
+    color: #9c27b0;
+}
+
+.boton {
+    color: rgb(27 , 209, 97);
+   
+}
+
+.subtitle2 {
+  
+    color: aqua;
+    font-size: 60PX;
+    text-align: center;
+}
+
+
+.contact {
+    padding-top: 20px;
+    background: #101010;
+    padding-bottom: 0;
+}
+
+.foto {
+    background-color: #101010;
+    color:  rgb(27 , 209, 97);
+    text-align: left;
+    font-size: 30px;
+    
+
+}
+
+.btn-2{
+    background-color: rgb(245, 139, 218);
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 35px;
+    color: black;
+    border: 5px solid rgb(238, 13, 218);
+   
+
+}
+
+.btn-1 {
+    background-color: rgb(245, 139, 218);
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 35px;
+    color: black;
+    border: 5px solid rgb(238, 13, 218);
+    
+}
+
+ 
+
+
+
+@media (max-width: 768px) {
+
+    .title {
+        margin-bottom: 0;
+        font-size: 40px;
+
+    }
+
+    .sau {
+        height: 100vh;
+    }
+
+    .navbar {
+        display: none;
+    }
+   
+    
+}
