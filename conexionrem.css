@@ -1,0 +1,268 @@
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+    
+    body {
+        text-align: center;
+        font-family: sans-serif;
+        background: rgb(1, 0, 5);
+
+    }
+
+.content_div{
+    margin: 100px;
+    color: #1cf739;
+    font-size:40px;
+    letter-spacing: 10px;
+}
+
+.projects{
+    background: #1cf739;
+}
+.projects__grid{
+    display: grid;
+    height: 550px;
+    grid-template-areas:  
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 7px;
+}
+
+
+
+.projects__item{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.projects__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.projects__item:nth-last-of-type(1){
+grid-area: img1;
+}
+
+.projects__item:nth-last-of-type(2){
+grid-area: img2;
+}
+
+.projects__item:nth-last-of-type(3){
+grid-area: img3;
+}
+
+.projects__item:nth-last-of-type(4){
+grid-area: img4;
+}
+
+.projects__hover{
+    position: absolute;
+    background: #dc143c8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+
+}
+
+.project__item:hover .projects__hover{
+    transform: translateX(0%);
+
+}
+
+.project__icon{
+    margin-top: 10px;
+    font-size: 30px;
+}
+.projects__title{
+color: #101010;
+background: #1cf739;
+
+
+}
+
+.subtitle{
+    font-size: 40px;
+    color: #101010;
+}
+
+
+.footer__title{
+    margin-bottom: 40px;
+    font-size: 50px;
+    padding: 0 100px;
+    border-radius: 10%;
+    text-transform: uppercase;
+    text-shadow: 5px 5px #9c27b0, 5px 5px #d26ce4;
+
+}
+
+
+    
+    
+
+    
+    .footer__title{
+    font-weight: 400;
+    color:#171717 ;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 20px;
+    }
+    .footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+    }
+    .footer__container-icon{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        color:#ffff;
+        text-align: center;
+        border: 1px solid #ffff;
+        border-radius: 50%; 
+    }
+    .footer__icons{
+        color:#1f1d1d;
+        font-size: 38px;
+        text-decoration: none;
+    
+    }
+    .fab.footer__icons{
+        line-height: 80px;
+    }
+
+
+
+
+.about {
+    background: #101010;
+}
+.price {
+    
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: left;
+    background-color: #101010;
+}
+
+.contain {
+    display: left;
+    color: #9c27b0;
+}
+
+.boton {
+    color: rgb(27 , 209, 97);
+   
+}
+
+.subtitle2 {
+  
+    color: aqua;
+    font-size: 60PX;
+    text-align: center;
+}
+
+
+.contact {
+    padding-top: 20px;
+    background: #101010;
+    padding-bottom: 0;
+}
+
+.foto {
+    background-color: #101010;
+    color:  rgb(27 , 209, 97);
+    text-align: left;
+    font-size: 30px;
+    
+
+}
+
+.btn-2{
+    background-color: rgb(245, 139, 218);
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 35px;
+    color: black;
+    border: 5px solid #9c27b0;
+   
+
+}
+
+.btn-home1 {
+    background-color: rgb(245, 139, 218);
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 35px;
+    color: black;
+    border: 5px solid #9c27b0;
+    font-size: 50px;    
+}
+.linksRem{
+    font-size: 80px;
+    letter-spacing: 2px;
+}
+.btn{
+    border: 1px;
+
+}
+
+.instr_conf{
+    background-color: rgb(245, 139, 218);
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 35px;
+    color:black;
+    border: 7px solid rgb(238, 13, 218);
+    font-size: 50px;    
+}
+
+.instr_conf h3{
+    font-size: 60px;
+}
+
+.instr_conf a{
+    font-size: 20px;
+}
+@media (max-width: 768px) {
+
+    .title {
+        margin-bottom: 0;
+        font-size: 40px;
+
+    }
+
+    .sau {
+        height: 100vh;
+    }
+
+    .navbar {
+        display: none;
+    }
+   
+    
+}
+
