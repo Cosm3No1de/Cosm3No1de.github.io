@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
+    justify-content: flex-start; /* Comienza desde la parte superior */
     min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
 }
 
@@ -20,25 +20,71 @@ body {
     margin: 20px 0; /* Margen para separar del resto */
     text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
 }
+/* Estilos para el subtítulo */
+.subtitle {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro */
+    font-size: 2.4rem; /* Tamaño de fuente 40% menor que el título */
+    text-align: center; /* Centra el texto */
+    margin: 10px 0; /* Margen para separar del título */
+    text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
+}
 
 /* Estilos para el carrito */
-.cart-icon {
-    position: absolute;
-    top: 20px;
-    left: 20px; /* Mueve el carrito a la parte superior izquierda */
-    background-color: rgba(128, 128, 128, 0.8); /* Color gris para el botón */
+.cart-container {
+    position: fixed;
+    top: 70px; /* Ajuste para que no se superponga al título */
+    left: -320px; /* Posición inicial del carrito fuera de la pantalla */
+    width: 300px; /* Ancho del carrito */
+    background-color: #222; /* Fondo del carrito */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Sombra para efecto retro */
+    transition: left 0.3s ease-in-out; /* Transición para el despliegue del carrito */
+    color: #FFD700; /* Color del texto del carrito */
+    display: block; /* Muestra el carrito por defecto */
+    z-index: 100; /* Asegura que el carrito esté por encima de otros elementos */
+}
+
+.cart-container.open {
+    left: 0; /* Muestra el carrito desplazándolo desde la izquierda */
+}
+
+.cart-container h3 {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro */
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.cart-container ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+    margin: 10px 0; /* Margen para separar de otros elementos */
+}
+
+.cart-container li {
+    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+    font-size: 1.1rem; /* Tamaño de fuente de los elementos del carrito */
+}
+
+#total-price {
+    font-size: 1.2rem; /* Tamaño de fuente más grande para el total */
+    margin: 10px 0; /* Margen para separar del resto */
+}
+
+.checkout-btn {
+    background-color: #FF6347; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 24px;
-    color: #fff; /* Color blanco para el icono */
-    border-radius: 50%; /* Hace el botón circular */
-    width: 50px; /* Ancho del botón */
-    height: 50px; /* Altura del botón */
-    display: flex; /* Flex para centrar el icono */
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra para efecto retro */
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ancho completo */
+}
+
+.checkout-btn:hover {
+    background-color: #FF4500; /* Color al pasar el mouse */
 }
 
 /* Estilos para la navegación */
@@ -118,63 +164,6 @@ nav a:hover {
     height: auto;
 }
 
-/* Estilos del carrito */
-.cart-container {
-    position: fixed;
-    top: 70px; /* Ajuste para que no se superponga al título */
-    left: 20px; /* Posición del carrito a la izquierda */
-    width: 300px; /* Ancho del carrito */
-    background-color: #222; /* Fondo del carrito */
-    padding: 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Sombra para efecto retro */
-    transition: top 0.3s ease-in-out;
-    color: #FFD700; /* Color del texto del carrito */
-    display: none; /* Oculta el carrito por defecto */
-}
-
-.cart-container.open {
-    display: block; /* Muestra el carrito cuando está abierto */
-}
-
-.cart-container h3 {
-    font-family: 'Press Start 2P', cursive; /* Fuente retro */
-    font-size: 2rem; /* Tamaño de fuente más grande */
-    margin-bottom: 10px; /* Espacio debajo del título */
-}
-
-.cart-container ul {
-    list-style-type: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el padding */
-    margin: 10px 0; /* Margen para separar de otros elementos */
-}
-
-.cart-container li {
-    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
-    font-size: 1.1rem; /* Tamaño de fuente de los elementos del carrito */
-}
-
-#total-price {
-    font-size: 1.2rem; /* Tamaño de fuente más grande para el total */
-    margin: 10px 0; /* Margen para separar del resto */
-}
-
-.checkout-btn {
-    background-color: #FF6347; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Ancho completo */
-}
-
-.checkout-btn:hover {
-    background-color: #FF4500; /* Color al pasar el mouse */
-}
-
 /* Estilos del footer */
 footer {
     background-color: rgba(34, 34, 34, 0.9); /* Fondo del footer con opacidad */
@@ -247,11 +236,25 @@ footer .footer-bottom p {
         padding: 5px; /* Reduce el espaciado interno de los productos en móviles */
     }
 
-    .cart-container {
-        width: 90%; /* Ocupa el 90% del ancho en móviles */
-        left: 50%; /* Centra horizontalmente */
-        transform: translateX(-50%); /* Centra horizontalmente */
-    }
+/* Estilos del carrito */
+.cart-container {
+    position: fixed;
+    top: 70px; /* Ajuste para que no se superponga al título */
+    left: -320px; /* Posición inicial del carrito fuera de la pantalla */
+    width: 300px; /* Ancho del carrito */
+    background-color: rgba(34, 34, 34, 0.75); /* Fondo del carrito con 25% de transparencia */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Sombra para efecto retro */
+    transition: left 0.3s ease-in-out; /* Transición para el despliegue del carrito */
+    color: #FFD700; /* Color del texto del carrito */
+    display: block; /* Muestra el carrito por defecto */
+    z-index: 100; /* Asegura que el carrito esté por encima de otros elementos */
+}
+
+.cart-container.open {
+    left: 0; /* Muestra el carrito desplazándolo desde la izquierda */
+}
 
     .footer-content {
         flex-direction: column; /* Apila las secciones del footer en móviles */
