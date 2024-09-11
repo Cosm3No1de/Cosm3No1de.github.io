@@ -1,0 +1,226 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fondo negro */
+    color: #FFD700; /* Texto en color dorado */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: flex-start; /* Comienza desde la parte superior */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+/* Estilos para el título */
+.title {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro */
+    font-size: 4rem; /* Tamaño de fuente grande */
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Margen para separar del resto */
+    text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
+}
+
+/* Estilos para el carrito */
+.cart-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Mueve el carrito a la parte superior izquierda */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FF6347; /* Color de los botones */
+    border-radius: 50%; /* Hace el botón circular */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    display: flex; /* Flex para centrar el icono */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra para efecto retro */
+}
+
+/* Estilos para la navegación */
+nav {
+    background-color: #333; /* Fondo de navegación */
+    padding: 10px;
+    width: 100%;
+    text-align: center; /* Centra los enlaces de navegación */
+    box-shadow: 0 2px 5px rgba(255, 215, 0, 0.5); /* Sombra para efecto retro */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFD700; /* Color dorado para los enlaces */
+    font-weight: bold; /* Negrita para mayor contraste */
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+}
+
+nav a:hover {
+    color: #FF6347; /* Color al pasar el mouse */
+}
+
+/* Estilos del slider */
+.slider {
+    display: flex;
+    justify-content: center; /* Centra el video */
+    margin: 20px 0; /* Margen para separar del resto */
+}
+
+.slide {
+    max-width: 100%; /* Asegura que el video no exceda el ancho */
+    border-radius: 10px; /* Bordes redondeados para el video */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.slide iframe {
+    width: 100%; /* Ancho completo */
+    height: 315px; /* Altura del video */
+}
+
+/* Estilos de la sección de productos */
+.products-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* Estilos de los productos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Máximo ancho para el contenido */
+    width: 100%; /* Ancho completo */
+}
+
+.product {
+    border: 1px solid #FF6347; /* Borde en color cálido */
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #444; /* Fondo de los productos */
+    padding: 10px; /* Espaciado interno */
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.2); /* Aumenta el tamaño en un 20% al pasar el mouse */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos del carrito */
+.cart-container {
+    position: fixed;
+    top: 70px; /* Ajuste para que no se superponga al título */
+    left: 20px; /* Posición del carrito */
+    width: 300px; /* Ancho del carrito */
+    background-color: #222; /* Fondo del carrito */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Sombra para efecto retro */
+    transition: top 0.3s ease-in-out;
+    color: #FFD700; /* Color del texto del carrito */
+    display: none; /* Oculta el carrito por defecto */
+}
+
+.cart-container.open {
+    display: block; /* Muestra el carrito cuando está abierto */
+}
+
+.cart-container h3 {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro */
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.cart-container ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+    margin: 10px 0; /* Margen para separar de otros elementos */
+}
+
+.cart-container li {
+    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+    font-size: 1.1rem; /* Tamaño de fuente de los elementos del carrito */
+}
+
+#total-price {
+    font-size: 1.2rem; /* Tamaño de fuente más grande para el total */
+    margin: 10px 0; /* Margen para separar del resto */
+}
+
+.checkout-btn {
+    background-color: #FF6347; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ancho completo */
+}
+
+.checkout-btn:hover {
+    background-color: #FF4500; /* Color al pasar el mouse */
+}
+
+/* Estilos del footer */
+footer {
+    background-color: rgba(34, 34, 34, 0.9); /* Fondo del footer con opacidad */
+    color: #FFD700; /* Color dorado para el texto */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra para efecto retro */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Incluye el padding en el ancho */
+    display: flex; /* Flex para distribuir el contenido */
+    justify-content: space-around; /* Distribuye el contenido uniformemente */
+    flex-direction: column; /* Cambia la dirección a columna */
+}
+
+.footer-content {
+    display: flex; /* Flex para distribuir el contenido del footer */
+    justify-content: space-around; /* Distribuye el contenido uniformemente */
+    width: 100%; /* Ancho completo */
+}
+
+.footer-section {
+    flex: 1; /* Distribuye el espacio uniformemente */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 0 20px; /* Margen entre secciones */
+}
+
+footer h3 {
+    font-family: 'Pacifico', cursive; /* Fuente llamativa para el footer */
+    font-size: 1.8rem; /* Tamaño de fuente más grande */
+}
+
+footer a {
+    color: #FFD700; /* Color dorado para los enlaces */
+}
+
+footer a:hover {
+    color: #FF6347; /* Color al pasar el mouse */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Espacio arriba del pie de página */
+    font-size: 1rem; /* Tamaño de fuente para el pie de página */
+}
+
+/* Estilos para el pie de página */
+footer .footer-bottom p {
+    margin: 0; /* Elimina el margen */
+}

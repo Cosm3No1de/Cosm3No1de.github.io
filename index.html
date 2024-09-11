@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fuente retro -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Fuente llamativa para el footer -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> <!-- Fuente retro para productos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM4Z1z0g0g0g0g0g0g0g0g0g0g0g0g0g0g0g0g0" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <header>
+        <h1 class="title">
+            <span class="s" style="color: #FF00FF; text-shadow: 1px 1px 0 #fff;">S</span> <!-- Fucsia -->
+            <span class="h" style="color: #0000FF; text-shadow: 1px 1px 0 #fff;">H</span> <!-- Azul -->
+            <span class="u" style="color: #FFD700; text-shadow: 1px 1px 0 #fff;">U</span>
+            <span class="n" style="color: #FF4500; text-shadow: 1px 1px 0 #fff;">N</span>
+        </h1>
+        <button class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i> <!-- Icono de carrito -->
+        </button>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Carrito</a>
+        <a href="#">Contacto</a>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
+    <main>
+        <div class="slider">
+            <div class="slide active">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="products-section">
+            <h2 class="products-title">Nuestros Productos</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="producto1.jpg" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>Descripción del producto 1</p>
+                    <p>Precio: $10</p>
+                    <button onclick="agregarAlCarrito('Producto 1', 10)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="producto2.jpg" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción del producto 2</p>
+                    <p>Precio: $15</p>
+                    <button onclick="agregarAlCarrito('Producto 2', 15)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="producto3.jpg" alt="Producto 3">
+                    <h3>Producto 3</h3>
+                    <p>Descripción del producto 3</p>
+                    <p>Precio: $20</p>
+                    <button onclick="agregarAlCarrito('Producto 3', 20)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="producto4.jpg" alt="Producto 4">
+                    <h3>Producto 4</h3>
+                    <p>Descripción del producto 4</p>
+                    <p>Precio: $12</p>
+                    <button onclick="agregarAlCarrito('Producto 4', 12)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="producto5.jpg" alt="Producto 5">
+                    <h3>Producto 5</h3>
+                    <p>Descripción del producto 5</p>
+                    <p>Precio: $18</p>
+                    <button onclick="agregarAlCarrito('Producto 5', 18)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="producto6.jpg" alt="Producto 6">
+                    <h3>Producto 6</h3>
+                    <p>Descripción del producto 6</p>
+                    <p>Precio: $22</p>
+                    <button onclick="agregarAlCarrito('Producto 6', 22)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="producto7.jpg" alt="Producto 7">
+                    <h3>Producto 7</h3>
+                    <p>Descripción del producto 7</p>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Producto 7', 25)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="producto8.jpg" alt="Producto 8">
+                    <h3>Producto 8</h3>
+                    <p>Descripción del producto 8</p>
+                    <p>Precio: $30</p>
+                    <button onclick="agregarAlCarrito('Producto 8', 30)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="cart" class="cart-container">
+        <h3>Carrito</h3>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0</p>
+        <button class="checkout-btn" onclick="realizarCompra()">Realizar Compra</button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: <a href="mailto:shun.neones@gmail.com">shun.neones@gmail.com</a></p>
+                <p>WhatsApp: ARG +541136802406 / PY +595991914594</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <p>Instagram: <a href="https://instagram.com/shun_neones">@shun_neones</a></p>
+                <p>Facebook: <a href="https://facebook.com/shun.neones">@shun_neones</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Más</h3>
+                <p>YouTube: <a href="https://youtube.com/shun_neones">shun_neones</a></p>
+                <p>TikTok: <a href="https://www.tiktok.com/@shun_neones">@shun_neones</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Todos los derechos reservados COSM3NO1DE.DEV</p>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!-- Enlace al archivo JS -->
+</body>
+</html>
