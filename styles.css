@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra horizontalmente */
-    justify-content: flex-start; /* Comienza desde la parte superior */
+    justify-content: center; /* Centra verticalmente */
     min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
 }
 
@@ -26,12 +26,12 @@ body {
     position: absolute;
     top: 20px;
     left: 20px; /* Mueve el carrito a la parte superior izquierda */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(128, 128, 128, 0.8); /* Color gris para el botón */
     border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
-    color: #FF6347; /* Color de los botones */
+    color: #fff; /* Color blanco para el icono */
     border-radius: 50%; /* Hace el botón circular */
     width: 50px; /* Ancho del botón */
     height: 50px; /* Altura del botón */
@@ -84,8 +84,8 @@ nav a:hover {
 .products-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
     flex-grow: 1;
 }
 
@@ -122,7 +122,7 @@ nav a:hover {
 .cart-container {
     position: fixed;
     top: 70px; /* Ajuste para que no se superponga al título */
-    left: 20px; /* Posición del carrito */
+    left: 20px; /* Posición del carrito a la izquierda */
     width: 300px; /* Ancho del carrito */
     background-color: #222; /* Fondo del carrito */
     padding: 20px;
@@ -223,4 +223,43 @@ footer a:hover {
 /* Estilos para el pie de página */
 footer .footer-bottom p {
     margin: 0; /* Elimina el margen */
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    body {
+        justify-content: flex-start; /* Centra verticalmente en móviles */
+    }
+
+    .title {
+        font-size: 3rem; /* Reduce el tamaño del título en móviles */
+    }
+
+    nav a {
+        font-size: 1rem; /* Reduce el tamaño de los enlaces de navegación en móviles */
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduce el ancho de los productos en móviles */
+    }
+
+    .product {
+        padding: 5px; /* Reduce el espaciado interno de los productos en móviles */
+    }
+
+    .cart-container {
+        width: 90%; /* Ocupa el 90% del ancho en móviles */
+        left: 50%; /* Centra horizontalmente */
+        transform: translateX(-50%); /* Centra horizontalmente */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Apila las secciones del footer en móviles */
+        align-items: center; /* Centra las secciones verticalmente */
+    }
+
+    .footer-section {
+        text-align: center; /* Centra el texto de las secciones del footer en móviles */
+        margin: 10px 0; /* Agrega margen vertical entre secciones */
+    }
 }
