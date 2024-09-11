@@ -30,3 +30,13 @@ function realizarCompra() {
         alert("Tu carrito está vacío. Agrega productos antes de realizar la compra.");
     }
 }
+
+// Función para mostrar el carrito al pasar el mouse por el margen izquierdo
+document.addEventListener('mousemove', (event) => {
+    const cartContainer = document.querySelector('.cart-container');
+    if (event.clientX < 50) { // Si el mouse está cerca del margen izquierdo
+        cartContainer.classList.add('open'); // Muestra el carrito
+    } else {
+        cartContainer.classList.remove('open'); // Oculta el carrito
+    }
+});
