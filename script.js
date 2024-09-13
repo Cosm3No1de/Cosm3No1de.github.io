@@ -1,42 +1,59 @@
-// Función para alternar el estado del carrito
-function toggleCart() {
-    const cartContainer = document.querySelector('.cart-container');
-    cartContainer.classList.toggle('open');
+// Array para almacenar los productos en el carrito
+let cart = [];
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(nombreProducto, precio) {
+    cart.push({ nombre: nombreProducto, precio: precio });
+    actualizarCarrito();
 }
 
-// Función para agregar productos al carrito
-function agregarAlCarrito(nombre, precio) {
+// Función para eliminar un producto del carrito
+function eliminarDelCarrito(index) {
+    cart.splice(index, 1);
+    actualizarCarrito();
+}
+
+// Función para actualizar el carrito
+function actualizarCarrito() {
     const cartItems = document.getElementById('cart-items');
     const totalPrice = document.getElementById('total-price');
-    
-    // Crear un nuevo elemento de lista
-    const li = document.createElement('li');
-    li.textContent = `${nombre} - $${precio}`;
-    cartItems.appendChild(li);
-    
+
+    // Limpiar el carrito
+    cartItems.innerHTML = '';
+
+    // Actualizar los elementos del carrito
+    cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.classList.add('cart-item');
+        li.innerHTML = `
+            <span>${item.nombre} - $${item.precio.toFixed(2)}</span>
+            <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
+        `;
+        cartItems.appendChild(li);
+    });
+
     // Actualizar el precio total
-    const currentTotal = parseFloat(totalPrice.textContent.replace('Total: $', ''));
-    totalPrice.textContent = `Total: $${(currentTotal + precio).toFixed(2)}`;
+    const total = cart.reduce((acc, item) => acc + item.precio, 0);
+    totalPrice.textContent = `Total: $${total.toFixed(2)}`;
+
+    // Actualizar el contador del carrito
+    const cartCount = document.getElementById('cart-count');
+    cartCount.textContent = cart.length;
 }
 
 // Función para realizar la compra
 function realizarCompra() {
-    const totalPrice = parseFloat(document.getElementById('total-price').textContent.replace('Total: $', ''));
-    
-    // Redirigir a la página de cobros con el total de la compra
-    if (totalPrice > 0) {
-        window.location.href = `https://example.com/checkout?total=${totalPrice}`;
-    } else {
-        alert("Tu carrito está vacío. Agrega productos antes de realizar la compra.");
+    if (cart.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
     }
+    alert("Compra realizada con éxito!");
+    cart = [];
+    actualizarCarrito();
 }
 
-// Función para mostrar el carrito al pasar el mouse por el margen izquierdo
-document.addEventListener('mousemove', (event) => {
-    const cartContainer = document.querySelector('.cart-container');
-    if (event.clientX < 50) { // Si el mouse está cerca del margen izquierdo
-        cartContainer.classList.add('open'); // Muestra el carrito
-    } else {
-        cartContainer.classList.remove('open'); // Oculta el carrito
-    }
-});
+// Función para alternar la visibilidad del carrito
+function toggleCart() {
+    const cartContainer = document.getElementById('cart');
+    cartContainer.classList.toggle('visible');
+}

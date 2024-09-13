@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - SHUN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fuente retro -->
+    <link rel="stylesheet" href="stylesp.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM4Z1z0g0g0g0g0g0g0g0g0g0g0g0g0g0g0g0g0" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1 class="title">
+            <span class="N" style="color: #FF00FF; text-shadow: 1px 1px 0 #fff;">N</span> <!-- Fucsia -->
+            <span class="U" style="color: #0000FF; text-shadow: 1px 1px 0 #fff;">u</span> <!-- Azul -->
+            <span class="e" style="color: #FFD700; text-shadow: 1px 1px 0 #fff;">e</span>
+            <span class="s" style="color: #FF4500; text-shadow: 1px 1px 0 #fff;">s</span>
+            <span class="t" style="color: #FF00FF; text-shadow: 1px 1px 0 #fff;">t</span> <!-- Fucsia -->
+            <span class="r" style="color: #0000FF; text-shadow: 1px 1px 0 #fff;">r</span> <!-- Azul -->
+            <span class="o" style="color: #FFD700; text-shadow: 1px 1px 0 #fff;">o</span>
+            <span class="s" style="color: #FF4500; text-shadow: 1px 1px 0 #fff;">s</span>
+        </h1>
+        <h2 class="subtitle">
+            <span style="color: #FF00FF; text-shadow: 1px 1px 0 #fff;">P</span> <!-- Fucsia -->
+            <span style="color: #FF0000; text-shadow: 1px 1px 0 #fff;">r</span> <!-- Rojo -->
+            <span style="color: #0000FF; text-shadow: 1px 1px 0 #fff;">o</span> <!-- Azul -->
+            <span style="color: #00FF00; text-shadow: 1px 1px 0 #fff;">d</span> <!-- Verde -->
+            <span style="color: #FFFF00; text-shadow: 1px 1px 0 #fff;">u</span> <!-- Amarillo -->
+            <span style="color: #FF4500; text-shadow: 1px 1px 0 #fff;">c</span> <!-- Naranja -->
+            <span style="color: #FF00FF; text-shadow: 1px 1px 0 #fff;">t</span> <!-- Fucsia -->
+            <span style="color: #FF0000; text-shadow: 1px 1px 0 #fff;">o</span> <!-- Rojo -->
+            <span style="color: #0000FF; text-shadow: 1px 1px 0 #fff;">s</span> <!-- Azul -->
+
+        </h2>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="product.html">Productos</a>
+        <a href="http://linktr.ee/shun_neones">Contacto</a>
+        <a href="#" class="cart-btn" onclick="toggleCart()">
+            Carrito <i class="fas fa-shopping-cart"></i>
+        </a>
+    </nav>
+    <main>
+        <div class="categories">
+            <h2>Categorías</h2>
+            <ul>
+                <li><a href="#personalizados">Letreros Personalizados</a></li>
+                <li><a href="#stock">Stock</a></li>
+                <li><a href="#neonflex">Lámparas NeonFlex</a></li>
+            </ul>
+        </div>
+        <div class="products-section" id="personalizados">
+            <h2>Letreros Personalizados</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="assets/letrero_personalizado1.jpg" alt="Letrero 1">
+                    <h3>Letrero Personalizado 1</h3>
+                    <p>Descripción del letrero personalizado 1.</p>
+                    <p>Precio: $100</p>
+                    <button onclick="agregarAlCarrito('Letrero Personalizado 1', 100)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="assets/letrero_personalizado2.jpg" alt="Letrero 2">
+                    <h3>Letrero Personalizado 2</h3>
+                    <p>Descripción del letrero personalizado 2.</p>
+                    <p>Precio: $120</p>
+                    <button onclick="agregarAlCarrito('Letrero Personalizado 2', 120)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="assets/letrero_personalizado3.jpg" alt="Letrero 3">
+                    <h3>Letrero Personalizado 3</h3>
+                    <p>Descripción del letrero personalizado 3.</p>
+                    <p>Precio: $150</p>
+                    <button onclick="agregarAlCarrito('Letrero Personalizado 3', 150)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="products-section" id="stock">
+            <h2>Stock</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="assets/stock_producto1.jpg" alt="Producto 1">
+                    <h3>Producto en Stock 1</h3>
+                    <p>Descripción del producto en stock 1.</p>
+                    <p>Precio: $80</p>
+                    <button onclick="agregarAlCarrito('Producto en Stock 1', 80)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="assets/stock_producto2.jpg" alt="Producto 2">
+                    <h3>Producto en Stock 2</h3>
+                    <p>Descripción del producto en stock 2.</p>
+                    <p>Precio: $90</p>
+                    <button onclick="agregarAlCarrito('Producto en Stock 2', 90)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="products-section" id="neonflex">
+            <h2>Lámparas NeonFlex</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="assets/neonflex_lampara1.jpg" alt="Lámpara NeonFlex 1">
+                    <h3>Lámpara NeonFlex 1</h3>
+                    <p>Descripción de la lámpara NeonFlex 1.</p>
+                    <p>Precio: $200</p>
+                    <button onclick="agregarAlCarrito('Lámpara NeonFlex 1', 200)">Agregar al Carrito</button>
+                </div>
+                <div class="product">
+                    <img src="assets/neonflex_lampara2.jpg" alt="Lámpara NeonFlex 2">
+                    <h3>Lámpara NeonFlex 2</h3>
+                    <p>Descripción de la lámpara NeonFlex 2.</p>
+                    <p>Precio: $250</p>
+                    <button onclick="agregarAlCarrito('Lámpara NeonFlex 2', 250)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="cart" class="cart-container">
+        <h3>Carrito</h3>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0</p>
+        <button class="checkout-btn" onclick="realizarCompra()">Realizar Compra</button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: <a href="mailto:shun.neones@gmail.com">shun.neones@gmail.com</a></p>
+                <p>WhatsApp: ARG +541136802406 / PY +595991914594</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <p>Instagram: <a href="https://instagram.com/shun_neones">@shun_neones</a></p>
+                <p>Facebook: <a href="https://facebook.com/shun.neones">@shun_neones</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Más</h3>
+                <p>YouTube: <a href="https://youtube.com/shun_neones">shun_neones</a></p>
+                <p>TikTok: <a href="https://www.tiktok.com/@shun_neones">@shun_neones</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Todos los derechos reservados COSM3NO1DE.DEV</p>
+        </div>
+    </footer>
+    <script src="script.js"></script> <!-- Enlace al archivo JS -->
+</body>
+</html>
