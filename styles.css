@@ -10,14 +10,14 @@ body {
     align-items: center;
     justify-content: flex-start; /* Alineación superior */
     min-height: 100vh;
-    cursor: url('assets/spaceship.png'), auto; /* Cursor personalizado */
+    cursor: url('assets/photo_CURSOR.jpg'), auto; /* Cursor personalizado */
 }
 
 /* Header Styles */
 header {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #5e033f, #1c1c1f); /* Gradiente neón */
+   background: linear-gradient(135deg, #5e033f, #1c1c1f); /* Gradiente neón */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
     width: 100%; /* Ancho total */
 }
@@ -25,7 +25,7 @@ header {
 /* Title Styles */
 h1.title {
     font-family: 'Press Start 2P', cursive; /* Fuente retro */
-    font-size: 4rem; /* Tamaño de fuente grande */
+    font-size: 7rem; /* Tamaño de fuente grande */
     text-align: center; /* Centra el texto */
     margin: 20px 0; /* Margen para separar del resto */
     text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
@@ -33,7 +33,7 @@ h1.title {
 
 h2.subtitle {
     font-family: 'Press Start 2P', cursive; /* Fuente retro */
-    font-size: 2.4rem; /* Tamaño de fuente 40% menor que el título */
+    font-size: 2.9rem; /* Tamaño de fuente 40% menor que el título */
     text-align: center; /* Centra el texto */
     margin: 10px 0; /* Margen para separar del título */
     text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
@@ -119,12 +119,25 @@ main {
     max-width: 1200px; /* Ancho máximo más grande */
 }
 
-.products-title {
-    text-align: center;
-    margin-bottom: 30px; /* Margen inferior más grande */
-    font-size: 3rem; /* Tamaño de fuente más grande */
-    color: #ff0080; /* Color vibrante */
+/* Title Styles */
+h2.products-title {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro */
+    font-size: 3rem; /* Tamaño de fuente grande */
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Margen para separar del resto */
+    text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
 }
+
+h3.subtitle {
+    font-family: 'Press Start 2P', cursive; /* Fuente retro */
+    font-size: 2rem; /* Tamaño de fuente 40% menor que el título */
+    text-align: center; /* Centra el texto */
+    margin: 10px 0; /* Margen para separar del título */
+    text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
+
+
+}
+
 
 .products {
     display: grid;
@@ -216,95 +229,100 @@ button:hover {
 
 /* Footer Styles */
 /* Footer Styles */
-footer {
-    background: linear-gradient(135deg, #5e033f, #1c1c1f); /* Gradiente neón */
-    color: white;
-    padding: 40px 20px; /* Aumentado el padding vertical y horizontal */
-    text-align: center;
-    width: 100%; /* Ancho total */
-    position: relative; /* Para asegurar que el footer se mantenga en su lugar */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil en la parte superior */
+.footer {
+    background: linear-gradient(to right, #ff00ff, #00ffff); /* Gradiente de fondo */
+    color: white; /* Texto blanco */
+    padding: 40px 20px; /* Padding vertical y horizontal */
+    text-align: center; /* Centrar texto */
+    border-top: 4px solid #ffffff; /* Borde superior blanco */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    overflow: hidden; /* Ocultar desbordamiento */
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    z-index: 1; /* Asegurarse de que esté detrás del contenido */
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: space-around; /* Espaciado entre secciones */
+    flex-wrap: wrap; /* Permitir que las secciones se ajusten en móviles */
+    position: relative; /* Para mantener el contenido por encima del pseudo-elemento */
+    z-index: 2; /* Asegurarse de que esté por encima del fondo */
 }
 
 .footer-section {
-    margin: 20px; /* Aumentado el margen */
-    font-size: 1.2rem;
-    flex-basis: 30%; /* Ancho base de cada sección */
+    margin: 20px; /* Margen entre secciones */
+    flex: 1 1 200px; /* Flexibilidad para el tamaño de las secciones */
+    min-width: 200px; /* Ancho mínimo para secciones */
 }
 
 .footer-section h3 {
-    color: #ff0080; /* Color vibrante para los encabezados */
-    margin-bottom: 10px; /* Espacio debajo del encabezado */
+    color: #ffffff; /* Color blanco para los encabezados */
+    margin-bottom: 10px; /* Margen debajo del encabezado */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    transition: color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.footer-section h3:hover {
+    color: #00ffff; /* Cambiar color al pasar el ratón */
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
 }
 
 .footer-section p {
     margin: 5px 0; /* Espaciado entre párrafos */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    transition: color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.footer-section p:hover {
+    color: #ff0080; /* Cambiar color al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
 }
 
 .footer-section a {
-    color: #ffffff; /* Color blanco para los enlaces */
+    color: #00ffff; /* Color cian para los enlaces */
     text-decoration: none; /* Sin subrayado */
-    transition: color 0.3s, transform 0.3s; /* Transición suave para el color y transformación */
+    transition: color 0.3s, transform 0.3s; /* Transiciones suaves */
 }
 
 .footer-section a:hover {
-    color: #00ffff; /* Color cian al pasar el ratón */
+    color: #ff0080; /* Cambiar color al pasar el ratón */
     transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
 }
 
+.footer-section i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    color: #ff0080; /* Color del icono */
+    transition: color 0.3s; /* Transición suave para el color del icono */
+}
+
+.footer-section a:hover i {
+    color: #00ffff; /* Cambiar color del icono al pasar el ratón */
+}
+
 .footer-bottom {
-    margin-top: 30px; /* Aumentado el margen superior */
-    font-size: 1rem;
-    color: #cccccc; /* Color gris claro para el texto de derechos de autor */
+    margin-top: 30px; /* Margen superior */
+    font-size: 1.5rem; /* Tamaño de fuente más grande para derechos reservados */
+    text-align: center; /* Centrar texto */
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Styles */
 @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center; /* Centrar secciones */
+    }
+
     .footer-section {
-        flex-basis: 100%; /* Secciones en una sola columna en móviles */
-        margin: 10px 0; /* Menos margen en móviles */
-    }
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    h1.title {
-        font-size: 3rem; /* Tamaño de fuente más pequeño en móviles */
-    }
-
-    h2.subtitle {
-        font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
-    }
-
-    nav a {
-        font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
-    }
-
-    .products-title {
-        font-size: 2rem; /* Tamaño de fuente más pequeño en móviles */
-    }
-
-    .product h3 {
-        font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
-    }
-
-    button {
-        font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
-    }
-}
-
-@media (max-width: 480px) {
-    .product {
-        padding: 10px; /* Menos padding en móviles */
-    }
-
-    button {
-        padding: 8px 16px; /* Menos padding en móviles */
+        margin: 10px 0; /* Margen vertical en móviles */
     }
 }
