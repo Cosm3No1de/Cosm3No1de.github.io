@@ -80,7 +80,7 @@
                 <div class="product">
                     <img src="assets/photo_2024-09-11_03-17-06.jpg" alt="Producto 2">
                     <h3> Nails  70cm x 40cm</h3>
-                    <p>Letrero de neón flex Nsils Esmalte.. 
+                    <p>Letrero de neón flex Nails Esmalte.. 
                         Medidas: Alto: 70cm. Ancho:40cm. 
                         Colores: a elección .
                         
@@ -171,23 +171,24 @@
     <div id="cart" class="cart-container">
         <h3>Carrito</h3>
         <ul id="cart-items"></ul>
-        <p id="total-price">Total: $0</p>
+        <p id="total-price">Total: $50</p> <!-- Cambia esto según el total real -->
         <button class="checkout-btn" onclick="realizarCompra()">Realizar Compra</button>
+        <button id="checkout-button">Finalizar Compra con Square</button>
     </div>
-    <footer>
+     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Contacto</h3>
+                <h3><i class="fas fa-envelope"></i> Contacto</h3>
                 <p>Email: <a href="mailto:shun.neones@gmail.com">shun.neones@gmail.com</a></p>
                 <p>WhatsApp: ARG +541136802406 / PY +595991914594</p>
             </div>
             <div class="footer-section">
-                <h3>Redes Sociales</h3>
+                <h3><i class="fab fa-instagram"></i> Redes Sociales</h3>
                 <p>Instagram: <a href="https://instagram.com/shun_neones">@shun_neones</a></p>
-                <p>Facebook: <a href="https://facebook.com/shun.neones">@shun_neones</a></p>
+                <p>Facebook: <a href="https://facebook.com/shun.neones">@shun.neones</a></p>
             </div>
             <div class="footer-section">
-                <h3>Más</h3>
+                <h3><i class="fab fa-youtube"></i> Más</h3>
                 <p>YouTube: <a href="https://youtube.com/shun_neones">shun_neones</a></p>
                 <p>TikTok: <a href="https://www.tiktok.com/@shun_neones">@shun_neones</a></p>
             </div>
@@ -196,6 +197,8 @@
             <p>&copy; 2024 Todos los derechos reservados COSM3NO1DE.DEV</p>
         </div>
     </footer>
-    <script src="script.js"></script> <!-- Enlace al archivo JS -->
+<!-- Incluir el script de Square y tu propio script al final del <body> -->
+    <script src="https://js.squareup.com/v2/paymentform"></script>
+    <script src="script.js"></script> <!-- Asegúrate de que esta ruta sea correcta -->
 </body>
 </html>

@@ -57,3 +57,25 @@ function toggleCart() {
     const cartContainer = document.getElementById('cart');
     cartContainer.classList.toggle('visible');
 }
+document.getElementById('checkout-button').addEventListener('click', async () => {
+    // Obtener el precio total del carrito
+    const totalPrice = parseFloat(document.getElementById('total-price').innerText.replace('Total: $', ''));
+
+    // Enviar una solicitud al servidor para crear un enlace de pago
+    const response = await fetch('/create-checkout-link', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ amount: totalPrice }), // Enviar el monto total
+    });
+
+    const data = await response.json(); // Parsear la respuesta JSON
+    if (data.checkoutUrl) {
+        // Redirigir al usuario al enlace de pago de Square
+        window.location.href = data.checkoutUrl;
+    } else {
+        // Mostrar un mensaje de error si no se pudo crear el enlace de pago
+        alert('Error al crear el enlace de pago');
+    }
+});

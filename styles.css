@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fondo oscuro */
+    background: linear-gradient(195deg, #441e3c, #01221f);
     color: #ffffff; /* Texto blanco */
     display: flex;
     flex-direction: column;
@@ -157,7 +157,7 @@ h3.subtitle {
 }
 
 .product:hover {
-    transform: scale(1.05); /* Efecto de aumento */
+    transform: scale(1.2); /* Efecto de aumento */
     box-shadow: 0 4px 20px rgba(255, 0, 128, 0.8); /* Sombra brillante al pasar el ratón */
 }
 
@@ -324,5 +324,129 @@ button:hover {
 
     .footer-section {
         margin: 10px 0; /* Margen vertical en móviles */
+    }
+}
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .footer {
+        padding: 20px 10px; /* Menos padding en móviles */
+    }
+
+    .footer-section h3 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .footer-section p {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .footer-section a {
+        font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
+}
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .footer {
+        padding: 30px 15px; /* Padding moderado para tabletas */
+    }
+
+    .footer-section h3 {
+        font-size: 2rem; /* Tamaño de fuente moderado */
+    }
+
+    .footer-section p {
+        font-size: 1.2rem; /* Tamaño de fuente moderado */
+    }
+
+    .footer-section a {
+        font-size: 1.2rem; /* Tamaño de fuente moderado */
+    }
+}
+
+/* Estilos para pantallas grandes (PC) */
+@media only screen and (min-width: 901px) {
+    .footer {
+        padding: 40px 20px; /* Padding para pantallas grandes */
+    }
+
+    .footer-section h3 {
+        font-size: 2.5rem; /* Tamaño de fuente grande */
+    }
+
+    .footer-section p {
+        font-size: 1.5rem; /* Tamaño de fuente grande */
+    }
+
+    .footer-section a {
+        font-size: 1.5rem; /* Tamaño de fuente grande */
+    }
+}
+/* Estilos generales para los títulos */
+h1, h2, h3 {
+    margin: 0; /* Eliminar márgenes predeterminados */
+    text-align: center; /* Centrar los títulos */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra de texto para mejorar la legibilidad */
+}
+
+/* Estilos para h1 */
+h1 {
+    font-size: 3rem; /* Tamaño de fuente grande para pantallas grandes */
+}
+
+/* Estilos para h2 */
+h2 {
+    font-size: 2.5rem; /* Tamaño de fuente grande para pantallas grandes */
+}
+
+/* Estilos para h3 */
+h3 {
+    font-size: 2rem; /* Tamaño de fuente moderado para pantallas grandes */
+}
+
+/* Media Queries para Responsividad */
+
+/* Móviles (hasta 600px) */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    h2 {
+        font-size: 2rem; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para móviles */
+    }
+}
+
+/* Tabletas (601px a 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 2.8rem; /* Tamaño de fuente moderado para tabletas */
+    }
+
+    h2 {
+        font-size: 2.3rem; /* Tamaño de fuente moderado para tabletas */
+    }
+
+    h3 {
+        font-size: 1.8rem; /* Tamaño de fuente moderado para tabletas */
+    }
+}
+
+/* Pantallas Grandes (más de 900px) */
+@media only screen and (min-width: 901px) {
+    h1 {
+        font-size: 3rem; /* Tamaño de fuente grande para pantallas grandes */
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Tamaño de fuente grande para pantallas grandes */
+    }
+
+    h3 {
+        font-size: 2rem; /* Tamaño de fuente moderado para pantallas grandes */
     }
 }
