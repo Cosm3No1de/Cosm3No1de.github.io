@@ -17,15 +17,44 @@ body {
 header {
     text-align: center;
     padding: 30px;
-   background: linear-gradient(135deg, #5e033f, #1c1c1f); /* Gradiente neón */
+    background: linear-gradient(135deg, #5e033f, #1c1c1f); /* Gradiente neón */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
     width: 100%; /* Ancho total */
+    color: white; /* Color del texto */
+    font-family: 'Arial', sans-serif; /* Fuente legible */
+}
+
+/* Estilos para el título del header */
+header h1 {
+    font-size: 2.5rem; /* Tamaño de fuente para pantallas grandes */
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        padding: 20px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Tamaño de fuente ajustado para móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px; /* Reduce aún más el padding en dispositivos muy pequeños */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para móviles muy pequeños */
+    }
 }
 
 /* Title Styles */
 h1.title {
     font-family: 'Press Start 2P', cursive; /* Fuente retro */
-    font-size: 7rem; /* Tamaño de fuente grande */
+    font-size: 3rem; /* Tamaño de fuente grande */
     text-align: center; /* Centra el texto */
     margin: 20px 0; /* Margen para separar del resto */
     text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
@@ -33,7 +62,7 @@ h1.title {
 
 h2.subtitle {
     font-family: 'Press Start 2P', cursive; /* Fuente retro */
-    font-size: 2.9rem; /* Tamaño de fuente 40% menor que el título */
+    font-size: 1.5.rem; /* Tamaño de fuente 40% menor que el título */
     text-align: center; /* Centra el texto */
     margin: 10px 0; /* Margen para separar del título */
     text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
@@ -122,7 +151,7 @@ main {
 /* Title Styles */
 h2.products-title {
     font-family: 'Press Start 2P', cursive; /* Fuente retro */
-    font-size: 3rem; /* Tamaño de fuente grande */
+    font-size:1.3rem; /* Tamaño de fuente grande */
     text-align: center; /* Centra el texto */
     margin: 20px 0; /* Margen para separar del resto */
     text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
@@ -130,7 +159,7 @@ h2.products-title {
 
 h3.subtitle {
     font-family: 'Press Start 2P', cursive; /* Fuente retro */
-    font-size: 2rem; /* Tamaño de fuente 40% menor que el título */
+    font-size: 0.8rem; /* Tamaño de fuente 40% menor que el título */
     text-align: center; /* Centra el texto */
     margin: 10px 0; /* Margen para separar del título */
     text-shadow: 1px 1px 0 #fff; /* Sombra blanca alrededor de las letras */
@@ -190,7 +219,7 @@ button:hover {
 
 /* Cart Styles */
 .cart-container {
-    background-color: #2a2a2a;
+    background-color: rgba(42, 42, 42, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(255, 0, 128, 0.5);
@@ -448,5 +477,85 @@ h3 {
 
     h3 {
         font-size: 2rem; /* Tamaño de fuente moderado para pantallas grandes */
+    }
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: auto; /* Centra el formulario */
+}
+
+/* Estilos de los elementos del formulario */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%; /* Hace que los campos ocupen el 100% del ancho del contenedor */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce el padding en dispositivos pequeños */
+    }
+
+    form {
+        padding: 15px; /* Reduce el padding del formulario */
+        margin-left: 5%; /* Ajusta el margen izquierdo */
+        margin-right: 5%; /* Ajusta el margen derecho */
+        max-width: none; /* Elimina el ancho máximo para pantallas pequeñas */
+    }
+
+    input, select, textarea {
+        font-size: 14px; /* Ajusta el tamaño de fuente en campos de entrada */
+        padding: 8px; /* Reduce el padding en campos de entrada */
+    }
+
+    button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho en pantallas pequeñas */
+        padding: 12px; /* Aumenta el padding del botón para mejor usabilidad */
+    }
+}
+
+@media (max-width: 480px) {
+    input, select, textarea {
+        font-size: 12px; /* Ajusta aún más el tamaño de fuente en dispositivos muy pequeños */
+        padding: 6px; /* Reduce el padding en campos de entrada */
+    }
+
+    button {
+        font-size: 14px; /* Ajusta el tamaño de fuente del botón */
+        padding: 10px; /* Reduce el padding del botón */
     }
 }
